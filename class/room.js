@@ -1,3 +1,5 @@
+
+
 class Room {
 
     constructor(name, description) {
@@ -45,10 +47,18 @@ class Room {
 
     getItemByName(name) {
 
-        // Fill this in
+        let item = "not Found";
+        for (let i = 0; i < this.items.length; i++) {
+            if (this.items[i].name === name) {
+                item = this.items[i];
+                break;
+            }
+        }
+        return item;
+    }
     }
 
-}
+
 
 module.exports = {
   Room,

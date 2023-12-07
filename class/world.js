@@ -42,17 +42,20 @@ class World {
 
             let itemData = itemList[i];
             let newItem;
+            
 
             if (itemData.isFood) {
-                console.log("ERROR: Food not supported yet.");
+                
                 // Fill this in
-                return;
+                    newItem = new Food(itemData.name,itemData.description)
+                
             } else {
                 newItem = new Item(itemData.name, itemData.description);
             }
 
             let itemRoom = this.rooms[itemData.room];
             itemRoom.items.push(newItem);
+            
        }
 
     }
